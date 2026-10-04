@@ -1,0 +1,11 @@
+# UI & Web
+gradio
+
+# Computer Vision & ML
+ultralytics
+opencv-python
+
+# Configuration
+pyyaml
+python-dotenv
+

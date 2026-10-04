@@ -1,0 +1,10 @@
+# Environment
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Local Testing
+# test_videos/ allowed in git so recruiters can immediately test
+.DS_Store
+Thumbs.db

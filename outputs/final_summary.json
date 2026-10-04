@@ -1,0 +1,11 @@
+{
+    "observation_duration_sec": 4,
+    "activity_duration_sec": {
+        "unknown": 3
+    },
+    "bed_exit_count": 0,
+    "bed_return_count": 0,
+    "total_in_bed_sec": 0,
+    "total_out_of_bed_sec": 4,
+    "final_state": "UNKNOWN"
+}

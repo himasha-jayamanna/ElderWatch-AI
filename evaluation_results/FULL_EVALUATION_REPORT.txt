@@ -1,0 +1,46 @@
+ElderWatch-AI Full Evaluation Report
+Generated: 2026-10-04 22:23:03
+
+============================================================
+ Video         : video_01_basic_states.mp4
+ Frame Accuracy: 99.2%
+ Event Rate    : 0.0%
+ Events Found  : []
+ Events Missed : ['RETURN_TO_BED']
+ Extra Events  : []
+
+ State                        Precision   Recall      F1
+------------------------------------------------------------
+ SITTING_ON_BED                   97.1%   100.0%    98.6%
+
+ Duration Estimation Errors:
+ Sitting on bed duration error: 0 sec
+
+ Output Video  : outputs/processed_video_01_basic_states.mp4
+ Agent Log     : outputs/agent_analysis_video_01_basic_states.log
+============================================================
+============================================================
+ Video         : video_02_bed_exit_return.mp4
+ Frame Accuracy: 91.8%
+ Event Rate    : 100.0%
+ Events Found  : []
+ Events Missed : []
+ Extra Events  : []
+
+ State                        Precision   Recall      F1
+------------------------------------------------------------
+ SITTING_ON_BED                    0.0%     0.0%     0.0%
+
+ Duration Estimation Errors:
+ Sitting on bed duration error: 0 sec
+
+ Output Video  : outputs/processed_video_02_bed_exit_return.mp4
+ Agent Log     : outputs/agent_analysis_video_02_bed_exit_return.log
+============================================================
+
+============================================================
+  CONSOLIDATED SUMMARY  (2 videos)
+============================================================
+  Average Frame Accuracy : 95.5%
+  Average Event Rate     : 50.0%
+============================================================

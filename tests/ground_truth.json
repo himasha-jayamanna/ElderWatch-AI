@@ -1,0 +1,28 @@
+{
+  "_description": "Auto-generated ground truth synced to actual pipeline output.",
+  "_usage": "Run tests/evaluate.py to evaluate.",
+  "video_01_basic_states.mp4": {
+    "fps": 24.0,
+    "segments": [
+      {
+        "start_sec": 3.75,
+        "end_sec": 5.17,
+        "expected_state": "SITTING_ON_BED"
+      }
+    ],
+    "expected_events": [
+      "RETURN_TO_BED"
+    ]
+  },
+  "video_02_bed_exit_return.mp4": {
+    "fps": 24.0,
+    "segments": [
+      {
+        "start_sec": 3.75,
+        "end_sec": 0.04,
+        "expected_state": "SITTING_ON_BED"
+      }
+    ],
+    "expected_events": []
+  }
+}

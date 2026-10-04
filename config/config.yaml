@@ -1,0 +1,34 @@
+# ElderWatch-AI Configuration File
+# ---------------------------------
+# Centralized thresholds for the Finite State Machine (FSM), Tracker, and Agent Logic.
+# Explanations are provided above each critical value to ensure explainability (KISS).
+
+tracker:
+  # FPS helps calculate the actual time from the frame count.
+  fps: 30
+
+fsm:
+  # To avoid frame-by-frame flickering, we use a majority-vote sliding window over N seconds.
+  # If fps=30, a 3-second window means evaluating 90 frames to commit a state transition.
+  majority_vote_window_seconds: 3.0
+
+  # Posture angles: SPINE_ANGLE is calculated between the spine and the vertical axis.
+  # An angle > 60 degrees implies horizontal (lying down).
+  # < 30 degrees implies vertical (standing/walking).
+  spine_angle_lying_thresh: 60.0
+  spine_angle_standing_thresh: 30.0
+  
+  # Movement threshold: Normalized velocity (torso-heights per second).
+  # Minimum movement to differentiate STANDING (static) from WALKING (dynamic).
+  # Since it's normalized, slow camera pans won't trigger WALKING unless movement > 0.5 torso-heights/sec.
+  movement_velocity_thresh: 0.5 
+
+buffer:
+  # Temporal Ring Buffer size: How far back and forward the agent can inspect in seconds.
+  # Used to evaluate ambiguous actions (e.g. bed exits and returns).
+  past_history_seconds: 8.0
+  future_lookahead_seconds: 5.0
+
+agent:
+  # Confidence threshold. If tracker/pose confidence is below this, State becomes UNKNOWN.
+  min_pose_confidence: 0.50
