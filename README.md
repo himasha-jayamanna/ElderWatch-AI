@@ -32,6 +32,9 @@ graph TD
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
+
+# (Optional) For VLM Agent mode, create your .env
+cp .env.example .env
 ```
 
 ### Full Evaluation (Batch Mode)
