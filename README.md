@@ -1,4 +1,4 @@
-# ElderWatch-AI — Patient Monitoring System
+# ElderWatch-AI - Patient Monitoring System
 
 An Agentic AI + Computer Vision system designed to analyze continuous indoor videos of elderly persons to track temporal activities and detect bed-related events.
 
